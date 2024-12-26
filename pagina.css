@@ -1,0 +1,80 @@
+
+*{
+    margin: 0px;
+    padding: 0; 
+    border: none;
+    box-sizing: border-box;
+    /* list-style:none ; */
+ }
+
+.grade {
+    display: grid;
+    width: 100%;
+    max-width: 800px;
+    grid-template-columns: repeat(4,90px);
+    gap: 40px;
+    justify-content: center; 
+    position: absolute;
+    transform: translate(-50%,-50%);
+    left: 50%;
+    top: 50%; 
+    
+}
+
+.carta{
+    background-color: white;
+    width: 120%;
+    aspect-ratio: 5/6;
+    position: relative;
+    transition: all 400ms ease;
+    transform-style: preserve-3d ;
+    
+}
+
+.face{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    border: 2px solid white ;
+    transition: all 2000ms ease;
+}
+
+.back{
+    background-image: url('images/selecao.jpg');
+    background-size: cover;
+    background-position: center;
+    backface-visibility: hidden;
+     
+
+}
+
+.front {
+
+    background-size: cover;
+    background-position: center;
+    transform: rotateY(180deg);
+}
+
+.revelacao{
+    transform: rotateY(180deg);
+}
+
+.desabled-card{
+    filter: saturate(0);
+    opacity: 0.5;
+}
+
+header{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    justify-content: center ;
+    margin-top: 7%;
+    margin-left: 7%;
+    font-size: 200%;
+    background-color: transparent;
+    width: 20%;
+    border-radius: 10%;
+    box-shadow:10px 5px 5px 5px  rgba(0, 0, 0, 0.432);
+    color: white;
+}
